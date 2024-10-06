@@ -16,7 +16,7 @@ jobs:
             - name: Show OS
               run: |
                 echo "This job is running on a Windows runner."
-                echo ${{ github.runner }}
+                echo $RUNNER_OS
     mac-window:
         runs-on: mac-latest
         steps:
