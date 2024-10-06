@@ -9,7 +9,7 @@ jobs:
             - name: Show OS
               run: |
                 echo "This job is running on an Ubuntu runner."
-                echo ${{ github.runner }}
+                echo $RUNNER_OS
     ubuntu-window:
         runs-on: windows-latest
         steps:
@@ -23,4 +23,4 @@ jobs:
             - name: Show OS
               run: |
                 echo "This job is running on a MacOS runner."
-                echo ${{ github.runner }}
+                echo $RUNNER_OS
