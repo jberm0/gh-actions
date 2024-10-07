@@ -6,6 +6,7 @@ on:
 
 jobs:
     echo-data:
+        run-name: My custom workflow run name - ${{ runner.os }}
         runs-on: ubuntu-latest
         steps:
             - name: Display Information
