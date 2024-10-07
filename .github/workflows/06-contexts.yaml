@@ -1,7 +1,6 @@
 name: 06 - Contexts
 
 on:
-    push:
     workflow_dispatch:
         inputs:
             debug:
@@ -32,7 +31,7 @@ jobs:
                 echo "Run number: ${{github.run_number}}"
             - name: Retrieve Variable
               run: |
-                echo ${{ vars.MY_VAR }}
+                echo "${{ vars.MY_VAR }}"
             - name: Print Env Variables
               env:
                 MY_OVERWRITTEN_VAR: 'step'
