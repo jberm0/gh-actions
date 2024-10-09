@@ -13,7 +13,7 @@ jobs:
                 echo ${{ github.event.pull_request.title }}
             - name: Print PR labels
               run: |
-                echo toJSON(${{ github.event.pull_request.labels }})
+                echo ${{ toJSON(github.event.pull_request.labels) }}
             - name: Bug step
               if: ${{ failure() }} && contains(${{ github.event.pull_request.title }}, 'fix')
               run: |
